@@ -48,6 +48,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count;
+	
         }
 
 	function resultsPercent() {
@@ -61,7 +63,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let coldPercentage = ((cold_count / total) * 100).toFixed(1);
 
 		document.getElementById("results").innerHTML = 
-			'<b>Diagnosis:</b><br>Allergy: ${allergyPercentage}%<br>Cold: ${coldPercentage}%';
+			`<b>Diagnosis:</b><br>Allergy: ${allergyPercentage}%<br>Cold: ${coldPercentage}%`;
 	}
 
   </script>
@@ -125,6 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?</p>
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
 </div>
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
@@ -135,6 +138,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat</p>
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
 </div>
 
 <div class="page" id="four">
@@ -146,6 +150,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
 </div>
 
 <div class="page" id="five">
@@ -155,7 +160,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 	<p id="results"></p>
-	<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Results! </a>
+	<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Show Results </a>
 	</div>
 
 </div>
