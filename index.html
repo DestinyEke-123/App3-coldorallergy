@@ -50,6 +50,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+	function resultsPercent() {
+		let total = allergy_count + cold_count;
+		if (total === 0) {
+			document.getElementById("results").innerHTML = "No answers recorded.";
+			return;
+		}
+
+		let allergyPercentage = ((allergy_count / total) * 100).toFixed(1);
+		let coldPercentage = ((cold_count / total) * 100).toFixed(1);
+
+		document.getElementById("results").innerHTML = 
+			'<b>Diagnosis:</b><br>Allergy: ${allergyPercentage}%<br>Cold: ${coldPercentage}%';
+	}
+
   </script>
 
 
@@ -142,6 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 	<p id="results"></p>
 	<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Results! </a>
+	</div>
 
 </div>
 		
